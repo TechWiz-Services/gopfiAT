@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gopfi</title>
+<meta name="description" content="gopfi: Chatbot für österreichisches Arbeitsrecht. In Entwicklung (Alpha).">
+<style>
+  :root {
+    --bg: #fafaf8; --fg: #1d1d1b; --muted: #5f5f5a; --line: #deded8;
+    --accent: #1f5c4a; --warn-bg: #fff4d6; --warn-line: #e3c36a; --warn-fg: #5a4300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151614; --fg: #ecece8; --muted: #a2a29a; --line: #2f302c;
+      --accent: #7cc4aa; --warn-bg: #2d2610; --warn-line: #7a6525; --warn-fg: #f0dca0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 3rem 16px 4rem; }
+  h1 { font-size: 2.2rem; margin: 0 0 .25rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.05rem; margin: 2.2rem 0 .5rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  p { margin: .6rem 0; }
+  a { color: var(--accent); }
+  .tag { color: var(--muted); margin: 0 0 1.5rem; }
+  .notice {
+    background: var(--warn-bg); border: 1px solid var(--warn-line); color: var(--warn-fg);
+    border-radius: 8px; padding: .7rem 1rem; margin: 1.2rem 0;
+  }
+  table { border-collapse: collapse; width: 100%; margin: .5rem 0; }
+  th, td { text-align: left; vertical-align: top; padding: .45rem .6rem .45rem 0; border-top: 1px solid var(--line); }
+  th { width: 10rem; font-weight: 600; color: var(--muted); }
+  code { font: .92em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0 1.5rem; }
+  footer { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>gopfi</h1>
+  <p class="tag">Chatbot für österreichisches Arbeitsrecht</p>
+
+  <div class="notice"><strong>Entwicklungsstand: Alpha.</strong> gopfi befindet sich in Entwicklung und ist nicht öffentlich nutzbar.</div>
+
+  <p>gopfi beantwortet Fragen zum österreichischen Arbeitsrecht ausschließlich auf Grundlage einer lokalen Kopie der Rechtsvorschriften und nennt zu jeder Antwort die Fundstelle. Es ist eine Information, keine Rechtsberatung und nicht der authentische Rechtstext.</p>
+
+  <h2>Datenbezug</h2>
+  <p>Die Rechtsvorschriften stammen aus dem Rechtsinformationssystem des Bundes (RIS) und werden über die OGD-RIS-API bezogen. gopfi ist kein Angebot des Bundes.</p>
+  <table>
+    <tr><th>User-Agent</th><td><code>gopfi/0.1 (+mailto:i***@tw-s.at)</code><br><small>Die Kontaktadresse ist hier gekürzt.</small></td></tr>
+    <tr><th>Zeiten</th><td>nur 20:00–05:00 Uhr (österreichische Zeit) sowie an Wochenenden und Feiertagen</td></tr>
+    <tr><th>Rate</th><td>höchstens 1 Abfrage alle 2,5 Sekunden, eine Verbindung, keine Parallelität</td></tr>
+    <tr><th>Umfang</th><td>ausgewählte Gesetze, danach nur Änderungen</td></tr>
+  </table>
+
+  <h2>Betreiber</h2>
+  <p>Ein Projekt von <a href="https://techwiz-services.eu">TechWiz Services</a> (techwiz-services.eu).</p>
+
+  <hr>
+  <h2>In English</h2>
+  <p><strong>gopfi</strong> is a chatbot for Austrian labour law that answers only from a local copy of the law and cites every provision. <strong>Status: in development (alpha), not publicly available.</strong> The data comes from the Austrian Federal Legal Information System (RIS) through its OGD API, at night and within RIS's published rate limits. Not an official service of the Federation. Built by <a href="https://techwiz-services.eu">TechWiz Services</a>.</p>
+
+  <footer>
+    <p>Datenquelle: RIS – Rechtsinformationssystem des Bundes, <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a></p>
+  </footer>
+</main>
+</body>
+</html>
