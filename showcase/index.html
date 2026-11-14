@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>gopfi Showcase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side" aria-label="Frühere Fälle">
+    <div class="brand">gopfi</div>
+    <h2>Frühere Fälle</h2>
+    <div class="search">
+      <input id="q" type="search" placeholder="Mandant oder Gesetz suchen …" aria-label="Fälle durchsuchen" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="count" id="count" aria-live="polite"></div>
+    <ul class="cases" id="cases"></ul>
+    <div class="cnote" id="cnote" aria-live="polite"></div>
+    <div class="sidefoot">
+      <strong>⌂ Nur im Browser.</strong> Keine KI hat Zugriff auf diese Liste. Die Suche filtert lokal mit JavaScript, ohne Anfrage an den gopfi-Server und ohne Anfrage an Mistral.
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="topline">
+      <button class="menu-btn" id="menu" aria-controls="side" aria-expanded="false">☰ Fälle</button>
+    </div>
+    <div class="banner">
+      <strong>Vorführung.</strong> Erfundener Fall, erfundene Personen, vorbereitete Texte. Beim Klicken wird kein Modell befragt und nichts gesendet. Keine Rechtsberatung. Der Wortlaut der Gesetze stammt aus der gopfi-Gesetzessammlung (G-VBG 2012).
+    </div>
+    <ol class="steps" id="steps" aria-label="Schritte"></ol>
+    <p class="legend">Mit ↗ markierte Schritte senden Daten an Mistral. Pfeiltasten ← → blättern.</p>
+    <div id="view"></div>
+  </main>
+</div>
+<noscript><p style="padding:16px">Diese Seite braucht JavaScript.</p></noscript>
+<script src="laws.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
